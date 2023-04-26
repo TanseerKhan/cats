@@ -1,0 +1,54 @@
+// Single-child layout example
+
+import 'package:flutter/material.dart';
+
+class SingleChildList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Single-child List'),
+      ),
+      body: Center(
+        child: ListTile(
+          leading: Icon(Icons.favorite),
+          title: Text('Flutter is awesome!'),
+        ),
+      ),
+    );
+  }
+}
+
+
+// Multi-child layout example
+
+import 'package:flutter/material.dart';
+
+class MultiChildList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Multi-child List'),
+      ),
+      body: Center(
+        child: ListView(
+          children: [
+            ListTile(
+              leading: Icon(Icons.favorite),
+              title: Text('Flutter is awesome!'),
+            ),
+            ListTile(
+              leading: Icon(Icons.thumb_up),
+              title: Text('I love Flutter!'),
+            ),
+            ListTile(
+              leading: Icon(Icons.star),
+              title: Text('Flutter is the best!'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

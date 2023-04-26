@@ -1,0 +1,48 @@
+// Single-child layout example
+
+import 'package:flutter/material.dart';
+
+class SingleChildIcon extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Single-child Icon'),
+      ),
+      body: Center(
+        child: IconButton(
+          icon: Icon(Icons.favorite),
+          onPressed: () {
+            // Do something when the icon is pressed
+          },
+        ),
+      ),
+    );
+  }
+}
+
+
+// Multi-child layout example
+
+import 'package:flutter/material.dart';
+
+class MultiChildIcon extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Multi-child Icon'),
+      ),
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Icon(Icons.favorite),
+            Icon(Icons.thumb_up),
+            Icon(Icons.star),
+          ],
+        ),
+      ),
+    );
+  }
+}

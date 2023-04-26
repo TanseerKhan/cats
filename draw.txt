@@ -1,0 +1,67 @@
+// Single-child layout example
+
+import 'package:flutter/material.dart';
+
+class SingleChildDrawer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Single-child Drawer'),
+      ),
+      drawer: Drawer(
+        child: ListTile(
+          leading: Icon(Icons.favorite),
+          title: Text('Flutter is awesome!'),
+        ),
+      ),
+      body: Center(
+        child: Text('This is the body of the screen'),
+      ),
+    );
+  }
+}
+
+
+// Multi-child layout example
+
+import 'package:flutter/material.dart';
+
+class MultiChildDrawer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Multi-child Drawer'),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              child: Text('Drawer Header'),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.favorite),
+              title: Text('Flutter is awesome!'),
+            ),
+            ListTile(
+              leading: Icon(Icons.thumb_up),
+              title: Text('I love Flutter!'),
+            ),
+            ListTile(
+              leading: Icon(Icons.star),
+              title: Text('Flutter is the best!'),
+            ),
+          ],
+        ),
+      ),
+      body: Center(
+        child: Text('This is the body of the screen'),
+      ),
+    );
+  }
+}
